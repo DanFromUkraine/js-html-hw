@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  filter: invert(50%);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.test {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.df_center, wrapper footer bottom ul li, wrapper header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.df_space_between, wrapper footer bottom, wrapper header ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+wrapper {
+  width: 95vw;
+  font-family: "Montserrat", sans-serif;
+}
+wrapper header {
+  width: 95vw;
+}
+wrapper header img-wrapper img {
+  margin: 0 12vw;
+}
+wrapper header ul {
+  list-style-type: none;
+  margin: 25px 3.5vw 25px 3.5vw;
+  width: 19vw;
+  font-size: 1.4285714286vw;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+}
+wrapper header ul li {
+  padding: 5px;
+}
+wrapper footer {
+  width: 95vw;
+  justify-items: center;
+}
+wrapper footer thanksgiving {
+  display: grid;
+  justify-items: center;
+  margin: 20px;
+}
+wrapper footer thanksgiving :is(*) {
+  margin: 0;
+}
+wrapper footer thanksgiving h3 {
+  font-size: 1.7142857143vw;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+}
+wrapper footer thanksgiving h2 {
+  font-size: 3.4285714286vw;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: none;
+  margin: 30px;
+}
+wrapper footer bottom {
+  margin: 0;
+  height: 320px;
+  background-color: black;
+  padding: 20px;
+}
+wrapper footer bottom ul {
+  list-style-type: none;
+  display: grid;
+  align-content: space-around;
+  font-size: 1.4285714286vw;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  margin-right: 10px;
+}
+wrapper footer bottom ul li {
+  color: white;
+}/*# sourceMappingURL=style.css.map */

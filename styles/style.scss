@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+$window: 1400px;
+
+@function w($width) {
+  @return ($width * 100vw) / $window;
+}
+@mixin text-style($size, $weight, $style: normal, $transform: none) {
+  font-size: w($size);
+  font-weight: $weight;
+  font-style: $style;
+  text-transform: $transform;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+    filter: invert(50%);
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.test {
+  color: rgba(0, 0, 0, 0.5);
+}
+.df_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // в контексті данного завдання додавати цей клас немає сенсу, але якщо взяти весь макет - є;
+}
+.df_space_between {
+    display: flex;
+    justify-content: space-between;
+}
+
+wrapper {
+  width: 95vw;
+  font-family: "Montserrat", sans-serif;
+  header {
+    @extend .df_center;
+    width: 95vw;
+    img-wrapper img {
+      margin: 0 12vw;
+    }
+    ul {
+      @extend .df_space_between;
+      list-style-type: none;
+      margin: 25px 3.5vw 25px 3.5vw;
+      width: 19vw;
+      li {
+        padding: 5px;
+      }
+      @include text-style(20px, 400, normal, uppercase);
+    }
+  }
+  footer {
+    width: 95vw;
+    justify-items: center;
+    thanksgiving {
+      display: grid;
+      justify-items: center;
+      margin: 20px;
+      :is(*) {
+        margin: 0;
+      }
+      h3 {
+        @include text-style(24px, 400, normal, uppercase);
+      }
+      h2 {
+        @include text-style(48px, 900, italic);
+        margin: 30px;
+      }
+    }
+    bottom {
+      @extend .df_space_between;
+      margin: 0;
+      height: 320px;
+      background-color: black;
+      padding: 20px;
+
+      ul {
+        list-style-type: none;
+        display: grid;
+        align-content: space-around;
+        
+        @include text-style(20px, 400, normal, uppercase);
+        li {
+            color: white;
+            @extend .df_center;
+        }
+        margin-right: 10px;
+      }
+    }
+  }
+}
